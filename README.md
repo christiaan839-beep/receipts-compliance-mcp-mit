@@ -19,6 +19,10 @@ A local MCP server and Claude Desktop Extension. It verifies signed AI-agent rec
 
 Sections that need operator narrative are left as marked stubs. The reports are evidence summaries, not legal advice or a certification.
 
+## Privacy
+
+Everything runs on your machine. The extension makes no network requests, collects no telemetry and stores nothing. Receipts and keys you pass to a tool are processed in memory and returned to Claude.
+
 ## Install
 
 Download `receipts-compliance.mcpb` from a release and open it in Claude Desktop. To build it yourself:
