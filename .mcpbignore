@@ -1,0 +1,11 @@
+node_modules
+src
+tests
+tsconfig.json
+vitest.config.*
+package-lock.json
+.git
+.gitignore
+*.mcpb
+.clawness
+.governor

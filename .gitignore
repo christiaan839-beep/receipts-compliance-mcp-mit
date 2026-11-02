@@ -1,0 +1,6 @@
+node_modules
+*.mcpb
+.DS_Store
+.clawness
+.governor
+dist

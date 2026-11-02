@@ -1,0 +1,27 @@
+{
+  "name": "receipts-compliance-mcp",
+  "version": "0.1.0",
+  "description": "Local MCP server and Claude Desktop Extension: verify signed AI-agent receipt bundles and build regulator-ready reports (EU AI Act Annex IV, ISO 42001, ISO 23894, NIST AI RMF, SOC 2, GDPR DPIA, HIPAA, EU CRA) from them. Runs offline; receipts never leave your machine.",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": { "receipts-compliance-mcp": "dist/server.js" },
+  "files": ["dist", "manifest.json", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "esbuild src/server.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/server.js && chmod +x dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "pack:mcpb": "npm run build && mcpb pack . receipts-compliance.mcpb"
+  },
+  "keywords": ["mcp", "mcpb", "claude", "ai-compliance", "eu-ai-act", "iso-42001", "nist-ai-rmf", "soc2", "receipts"],
+  "author": "Christiaan de Wet (https://github.com/christiaan839-beep)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/christiaan839-beep/receipts-compliance-mcp.git" },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "^2.1.2",
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

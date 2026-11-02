@@ -1,0 +1,92 @@
+{
+  "manifest_version": "0.3",
+  "name": "receipts-compliance-mcp",
+  "display_name": "Receipts Compliance",
+  "version": "0.1.0",
+  "description": "Verify signed AI-agent receipt bundles and build regulator-ready compliance reports from them, offline.",
+  "long_description": "Runs locally. Checks a signed receipt bundle manifest against an Ed25519 public key, then turns a set of receipts into auditor-ready Markdown: EU AI Act Annex IV, ISO/IEC 42001, ISO/IEC 23894, NIST AI RMF, SOC 2, GDPR DPIA and Records of Processing, HIPAA Security Rule, EU Cyber Resilience Act, and an audit against a signed AI constitution. Receipts are never uploaded. Narrative sections that need operator input are left as clearly marked stubs.",
+  "author": {
+    "name": "Christiaan de Wet",
+    "url": "https://github.com/christiaan839-beep"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christiaan839-beep/receipts-compliance-mcp"
+  },
+  "homepage": "https://github.com/christiaan839-beep/receipts-compliance-mcp",
+  "license": "MIT",
+  "keywords": [
+    "compliance",
+    "eu-ai-act",
+    "iso-42001",
+    "nist-ai-rmf",
+    "soc2",
+    "receipts"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/server.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/server.js"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "verify_manifest",
+      "description": "Verify a signed receipt bundle manifest against an Ed25519 public key."
+    },
+    {
+      "name": "build_annex_iv",
+      "description": "EU AI Act Annex IV technical documentation from receipts."
+    },
+    {
+      "name": "build_iso_42001",
+      "description": "ISO/IEC 42001:2023 AI management system report."
+    },
+    {
+      "name": "build_iso_23894",
+      "description": "ISO/IEC 23894:2023 AI risk management report."
+    },
+    {
+      "name": "build_nist_ai_rmf",
+      "description": "NIST AI RMF 1.0 profile."
+    },
+    {
+      "name": "build_soc2_evidence",
+      "description": "SOC 2 Trust Service Criteria evidence binder."
+    },
+    {
+      "name": "build_gdpr_dpia",
+      "description": "GDPR Article 35 DPIA and Article 30 Records of Processing."
+    },
+    {
+      "name": "build_hipaa_security",
+      "description": "HIPAA Security Rule evidence binder."
+    },
+    {
+      "name": "build_eu_cra",
+      "description": "EU Cyber Resilience Act compliance report."
+    },
+    {
+      "name": "build_constitution_audit",
+      "description": "Audit a receipt set against a signed AI constitution."
+    },
+    {
+      "name": "create_constitution",
+      "description": "Create a constitution document that receipts can be audited against."
+    }
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=20"
+    }
+  }
+}
