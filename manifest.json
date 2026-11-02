@@ -1,6 +1,6 @@
 {
   "manifest_version": "0.3",
-  "name": "receipts-compliance-mcp",
+  "name": "receipts-compliance-mcp-mit",
   "display_name": "Receipts Compliance",
   "version": "0.1.0",
   "description": "Verify signed AI-agent receipt bundles and build regulator-ready compliance reports from them, offline.",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/christiaan839-beep/receipts-compliance-mcp"
+    "url": "https://github.com/christiaan839-beep/receipts-compliance-mcp-mit"
   },
-  "homepage": "https://github.com/christiaan839-beep/receipts-compliance-mcp",
+  "homepage": "https://github.com/christiaan839-beep/receipts-compliance-mcp-mit",
   "license": "MIT",
   "keywords": [
     "compliance",

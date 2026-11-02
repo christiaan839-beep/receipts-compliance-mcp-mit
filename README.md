@@ -1,4 +1,4 @@
-# receipts-compliance-mcp
+# receipts-compliance-mcp-mit
 
 A local MCP server and Claude Desktop Extension. It verifies signed AI-agent receipt bundles and turns a set of receipts into auditor-ready Markdown reports. It runs offline; receipts are never uploaded.
 
